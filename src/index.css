@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-cinzel: "Cinzel", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  --color-midnight: #07131c;
+  --color-deep-ocean: #102631;
+  --color-charcoal: #111416;
+  --color-muted-grey: #75838b;
+  --color-silver: #c5cdd0;
+  --color-mist: #e7e8e4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  background-color: #07131c;
+  color: #e7e8e4;
+  overflow-x: hidden;
+}
+
+/* Smooth organic glassmorphism for dark ocean depth */
+.ocean-glass {
+  background: rgba(7, 19, 28, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(197, 205, 208, 0.1);
+  border-radius: 1.5rem;
+}
+
+.ocean-card {
+  background: linear-gradient(180deg, rgba(16, 38, 49, 0.4) 0%, rgba(7, 19, 28, 0.7) 100%);
+  border: 1px solid rgba(197, 205, 208, 0.1);
+  border-radius: 1.5rem;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ocean-card:hover {
+  border-color: rgba(197, 205, 208, 0.25);
+  box-shadow: 0 16px 45px -10px rgba(0, 0, 0, 0.7), 0 0 30px -5px rgba(16, 38, 49, 0.4);
+}
+
+/* Custom rounded scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #07131c;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c3542;
+  border-radius: 9999px;
+  border: 2px solid #07131c;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #75838b;
+}
+
+/* Photorealistic Compact Disc Spin & Lighting Keyframes */
+@keyframes cd-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-cd-spin-slow {
+  animation: cd-spin 26s linear infinite;
+}
+
+.animate-cd-spin-medium {
+  animation: cd-spin 16s linear infinite;
+}
+
+.animate-cd-spin-paused:hover {
+  animation-play-state: paused;
+}
+
+@keyframes aura-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.65;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.95;
+  }
+}
+
+.animate-aura-pulse {
+  animation: aura-pulse 4s ease-in-out infinite;
+}
+
+/* Rich Palette Gradients (Using exact chosen color tokens) */
+.text-gradient-silver {
+  background: linear-gradient(135deg, #ffffff 0%, #e7e8e4 40%, #c5cdd0 75%, #75838b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-ocean {
+  background: linear-gradient(135deg, #e7e8e4 0%, #c5cdd0 50%, #75838b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-ocean-deep {
+  background: linear-gradient(180deg, #050e14 0%, #07131c 50%, #102631 100%);
+}
+
+.bg-gradient-card {
+  background: linear-gradient(145deg, rgba(16, 38, 49, 0.45) 0%, rgba(7, 19, 28, 0.85) 60%, rgba(5, 14, 20, 0.95) 100%);
+}
+
+.bg-gradient-mist-btn {
+  background: linear-gradient(135deg, #ffffff 0%, #e7e8e4 60%, #c5cdd0 100%);
+}
+
+.bg-gradient-ocean-btn {
+  background: linear-gradient(135deg, rgba(16, 38, 49, 0.9) 0%, rgba(7, 19, 28, 0.95) 100%);
+}
+
+/* Hide scrollbar for smooth horizontal dragging tracks */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

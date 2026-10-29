@@ -1,0 +1,6 @@
+{
+  "name": "DARANY — Official Store & Artist Universe",
+  "description": "Exclusive merchandise and dark underwater folklore universe of independent artist DARANY.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
